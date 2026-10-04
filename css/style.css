@@ -50,6 +50,7 @@ input,
 textarea,
 select {
   font: inherit;
+  border: none;
 }
 
 .skip-link {
@@ -155,6 +156,7 @@ select {
   padding: 0.8rem 1.1rem;
   border-radius: 999px;
   box-shadow: var(--shadow-soft);
+  cursor: pointer;
 }
 
 .nav-cta::after {
@@ -203,6 +205,40 @@ select {
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 3rem;
+}
+
+.trust-band {
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 2.4rem 0;
+}
+
+.trust-inner {
+  text-align: center;
+}
+
+.trust-inner p {
+  margin: 0 0 1.4rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trust-list span {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .eyebrow {
@@ -255,6 +291,7 @@ select {
   border: 1px solid transparent;
   border-radius: 999px;
   font-weight: 600;
+  cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
 }
 
@@ -436,6 +473,10 @@ select {
   align-items: end;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.section-heading.narrow {
+  max-width: 780px;
 }
 
 .section-heading h2,
@@ -842,6 +883,8 @@ select {
 .article-content h3 {
   color: var(--ink);
   letter-spacing: -0.05em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .article-content p,
@@ -860,6 +903,12 @@ select {
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
   padding: 1.4rem;
+}
+
+.sidebar-box h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--ink);
 }
 
 .sidebar-box ul {
@@ -903,6 +952,7 @@ select {
     padding: 1rem 1rem 1.5rem;
     border-bottom: 1px solid var(--line);
     background: rgba(246, 247, 248, 0.98);
+    z-index: 99;
   }
 
   .site-nav.is-open {
@@ -940,6 +990,10 @@ select {
     min-height: auto;
     display: block;
   }
+
+  .trust-list {
+    gap: 1rem 2rem;
+  }
 }
 
 @media (max-width: 560px) {
@@ -961,5 +1015,9 @@ select {
 
   .cta-strip-inner {
     padding: 1.5rem 1.2rem;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr;
   }
 }
